@@ -1,0 +1,398 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50 px;
+    background-color: #0c0c0c;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+.orange-text {
+    color: #ff6600;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+
+}
+
+header nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ffffff;
+    background-color: #ff6600;
+    border-radius: 4px;
+}
+
+.hero.img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: brightness(60%)
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+main {
+    padding: 60px 50px;
+    background-color: #141414;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.card {
+    background-color: #222222;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    border-bottom: 4px solid #333333;
+    transition: 0.3s;
+}
+
+
+.highlight-card {
+    border-bottom: 4px solid #ff6600;
+    background-color: #2a2a2a;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+.card-btn {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    color: #ffffff;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 7. Sayfa Altı (Footer) Tasarımı */
+footer {
+    background-color: #0c0c0c;
+    /* Menü ile aynı koyu siyah ton */
+    padding: 30px 50px;
+    text-align: center;
+    /* Tüm yazıları ortalar */
+    border-top: 1px solid #222222;
+    /* Üst kısma ince bir sınır çizgisi */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    color: #888888;
+    /* Yumuşak bir gri tonu */
+    font-size: 14px;
+}
+
+.footer-sub {
+    font-size: 12px !important;
+    color: #555555 !important;
+    font-style: italic;
+    /* Eğik yazı tipi */
+}
+
+/* 5. Büyük Kedi Alanı (Hero Section) Tasarımı - Güncellendi */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Yüksekliği sabitledik */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* İçindeki yazıları dikeyde ortalar */
+}
+
+/* Kedi Resminin Tüm Alanı Kaplaması İçin Ayar */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Resmin oranını bozmadan alanı tamamen kaplar */
+    position: absolute;
+    /* Arka plana tamamen yayılmasını sağlar */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Resmin en arkada kalmasını garantiler */
+    filter: brightness(50%);
+    /* Resmin üzerindeki yazılar rahat okunsun diye kararttık */
+    object-position: center top;
+
+}
+
+/* Resmin Üzerine Gelecek Yazı Kutusunun Tasarımı */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Yazı kutusunu resmin üzerine çıkarır */
+    max-width: 500px;
+    /* Kutunun çok fazla uzayıp ekranı kaplamasını engeller */
+    margin-left: 50px;
+    /* Soldan boşluk bırakarak hizalar */
+    background-color: rgba(12, 12, 12, 0.85);
+    /* Arkasına şeffaf koyu bir kutu ekler */
+    padding: 35px;
+    border-radius: 8px;
+    border-left: 5px solid #ff6600;
+    /* Sol tarafına şık bir turuncu çizgi */
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Tanıtım Yazısının Altındaki Turuncu Buton */
+.hero-btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+/* 8. SSS (Sıkça Sorulan Sorular) Tasarımı */
+.faq-section {
+    padding: 60px 50px;
+    background-color: #1a1a1a;
+    /* Ana arka plan rengimiz */
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+/* Başlığın altına şık bir turuncu çizgi çekiyoruz */
+.faq-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ff6600;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Kutuyu sayfada ortalar */
+    text-align: left;
+    /* İçindeki yazıları sola yaslar */
+}
+
+.faq-item {
+    background-color: #222222;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid #333333;
+    transition: 0.3s;
+}
+
+/* Fareyle sorunun üzerine gelince sol çizgisi turuncu olsun */
+.faq-item:hover {
+    border-left: 4px solid #ff6600;
+    background-color: #262626;
+}
+
+.faq-question {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* 9. İletişim Bölümü Tasarımı */
+.contact-section {
+    padding: 60px 50px;
+    background-color: #141414;
+    /* Kartlar bölümü ile aynı koyulukta */
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contact-desc {
+    color: #888888;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    /* Formu sayfada ortalar */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+/* Giriş Alanlarının (Input ve Textarea) Modern Tasarımı */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #222222;
+    /* Koyu iç alan */
+    border: 1px solid #333333;
+    /* Hafif belirgin sınır çizgisi */
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 15px;
+    box-sizing: border-box;
+    /* Taşmaları engeller */
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Kutulara tıklandığında (Focus olunca) etrafında turuncu parlama efekti */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff6600;
+    background-color: #2a2a2a;
+}
+
+/* Formun Gönder Butonu */
+.submit-btn {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    /* Fare imlecini el işaretine dönüştürür */
+    transition: 0.3s;
+    width: 100%;
+    /* Butonun formu kaplamasını sağlar */
+}
+
+.submit-btn:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
